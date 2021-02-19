@@ -1,0 +1,42 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="text-center form-signin">
+    <%= image_tag 'login-logo.png', size: "190x180", class: "mb-4" %>
+    <h1 class="h3 mb-3 fw-normal">Account Settings</h1>
+    <div class="mb-3">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, class: "form-control", autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %>
+      <%= f.password_field :password, class: "form-control", placeholder: "leave blank to keep current" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, class: "form-control", placeholder: "leave blank to keep current" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :current_password %><br />
+      <%= f.password_field :current_password, class: "form-control", autocomplete: "current-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Update", class: "w-100 btn btn-lg btn-primary" %>
+    </div>
+<% end %>
+  <br>
+  <h1 class="h3 mb-3 fw-normal">Cancel my account</h1>
+  <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %>
+  <br>
+  <br>
+  <%= link_to "Back", :back, class: "btn btn-primary"%>
+</div>
+
+
+

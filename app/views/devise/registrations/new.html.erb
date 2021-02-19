@@ -1,0 +1,27 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+  <div class="text-center form-signin">
+    <%= image_tag 'login-logo.png', size: "190x180", class: "mb-4" %>
+    <h1 class="h3 mb-3 fw-normal">Registration</h1>
+    <div class="mb-3">
+      <%= f.email_field :email, class: "form-control", autofocus: true, placeholder: "Email address" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.password_field :password, class: "form-control", placeholder: "password" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.password_field :password_confirmation, class: "form-control", placeholder: "password confirmation" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.submit "Sign up", class: "w-100 btn btn-lg btn-primary" %>
+    </div>
+    <%= render "devise/shared/links" %>
+
+    <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+  <% end %>
+</div>
+
+
