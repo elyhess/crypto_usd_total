@@ -19,9 +19,16 @@ class PortfoliosController < ApplicationController
       Currency.new(coin_data)
     end
     
-    coin_value_dictionary = Hash.new()
+    coin_value_dictionary = Hash.new
     @currencies.each do |crypto|
       coin_value_dictionary[crypto.name] = crypto.price
+    end
+
+    @portfolios.each do |portfolio|
+      individual_portfolio_total_value = portfolio.coins.sum do |coin|
+        coin_value_dictionary[coin.name] * PortfolioCoin.find_by(coin_id: coin.id).quantity
+      end
+      portfolio.update(total: individual_portfolio_total_value)
     end
 
     #Poro sample
