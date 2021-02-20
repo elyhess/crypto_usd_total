@@ -1,0 +1,60 @@
+<h1>We are on the New Portfolio Page</h1>
+
+
+<%= form_with model: @portfolio, local: true do |f| %>
+
+  <%= render partial: "shared/form_errors", locals: {f: f} %>
+
+  <div class="mb-3">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :bitcoin %>
+    <%= f.text_field :bitcoin, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :ethereum %>
+    <%= f.text_field :ethereum, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :monero %>
+    <%= f.text_field :monero, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :uniswap %>
+    <%= f.text_field :uniswap, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :garlicoin %>
+    <%= f.text_field :garlicoin, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :decentraland %>
+    <%= f.text_field :decentraland, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :stellar %>
+    <%= f.text_field :stellar, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :litecoin %>
+    <%= f.text_field :litecoin, class: "form-control" %>
+  </div>
+
+
+  <div class="mb-3">
+    <%= f.label :chainlink %>
+    <%= f.text_field :chainlink, class: "form-control" %>
+  </div>
+
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

@@ -1,17 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <%= image_tag "login-logo.png", size: "60x60" %>
+    <%= link_to "Crypto Calculator", root_path, class: "navbar-brand pl-3" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-          <% if user_signed_in? %>
-          <li class="nav-item">
-            <%= link_to "Portfolios",portfios_path, class: "nav-link"%>
-          </li>
-          <% end %>
+        <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "Portfolios",portfolios_path, class: "nav-link"%>
+        </li>
+        <% end %>
+        <li class="nav-item">
+          <%= link_to "About", portfolios_path, class: "nav-link"%>
         </li>
       </ul>
 
@@ -35,3 +37,4 @@
     </div>
   </div>
 </nav>
+<br>
