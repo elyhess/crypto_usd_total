@@ -1,3 +1,14 @@
 <h1>We are on the Portfolio Dashboard Page</h1>
 
-<%= button_to "Create Portfolio", new_portfolio_path, method: :get %>
+<%= button_to "Create Portfolio", new_portfolio_path, method: :get, class: "btn btn-primary" %>
+<hr>
+
+<% @portfolios.each do |portfolio| %>
+  <%= portfolio.name %> <br>
+  <% portfolio.portfolio_coins.each do |portfolio_coin| %>
+    <%= portfolio_coin.coin_name %> -
+    <%= portfolio_coin.quantity %> <br>
+  <% end %>
+  <%= button_to "Delete", portfolio_path(portfolio), method: :delete  %>
+  <hr>
+<% end %>
