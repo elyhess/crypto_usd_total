@@ -5,10 +5,13 @@
 
 <% @portfolios.each do |portfolio| %>
   <%= portfolio.name %> <br>
+  <p>Total: <%= portfolio.total %></p>
+
   <% portfolio.portfolio_coins.each do |portfolio_coin| %>
     <%= portfolio_coin.coin_name %> -
     <%= portfolio_coin.quantity %> <br>
   <% end %>
+  
   <%= button_to "Delete", portfolio_path(portfolio), method: :delete  %>
   <hr>
 <% end %>
