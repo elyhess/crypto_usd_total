@@ -8,4 +8,8 @@ class PortfolioCoin < ApplicationRecord
     Coin.find(self.coin_id).name
   end
 
+  def value(currency)
+    currency.price * quantity
+  end
+
 end

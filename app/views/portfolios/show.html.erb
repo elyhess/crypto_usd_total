@@ -1,0 +1,17 @@
+<%= link_to @portfolio.name, portfolio_path(@portfolio) %>
+<br>
+<% @portfolio.portfolio_coins.each do |portfolio_coin| %>
+  <% @currencies.each do |currency| %>
+    <% if currency.name == portfolio_coin.name %>
+      <%= portfolio_coin.coin_name %> - <%= portfolio_coin.quantity %> - Total:
+      <%= portfolio_coin.value(currency) %> <br>
+    <% end %>
+  <% end %>
+<% end %>
+<p>Total: <%= @portfolio.total %></p>
+
+<%= button_to "Delete", portfolio_path(@portfolio), method: :delete, class: "btn btn-outline-danger"  %>
+<%= link_to 'Back', :back %>
+<hr>
+
+
