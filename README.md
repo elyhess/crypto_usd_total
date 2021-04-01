@@ -95,6 +95,4 @@ To get a local copy up and running follow these simple steps.
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* [README template](https://github.com/othneildrew/Best-README-Template)
-* [Turing School of Software & Design](https://github.com/turingschool-examples/viewing_party)
-* [MovieDB](https://developers.themoviedb.org/3/getting-started/introduction)
+* [CoinGecko](https://www.coingecko.com/api/documentations/v3)
