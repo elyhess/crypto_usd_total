@@ -15,7 +15,7 @@
 ![](https://img.shields.io/badge/Ruby-2.5.3-orange)
 
 
-![Crypto_USD_total](https://github.com/foymikek/crypto_usd_total/blob/main/banner.png)
+![Crypto_USD_total](https://github.com/elyhess/crypto_usd_total/blob/main/banner.png)
 <!-- TABLE OF CONTENTS -->
 <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
 <ol>
